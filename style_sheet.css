@@ -1,0 +1,46 @@
+body{
+    background-color: beige;
+}
+
+.card-grid{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+    justify-content: space-between;
+    align-items: center;
+    width: 80%;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+.card-item{
+    background-color: burlywood;
+    padding: 40%;
+    text-align: center;
+    color: bisque;
+    border-radius: 10px;
+    box-shadow: lightgrey 4px 4px;
+
+}
+
+@media (max-width: 600px){
+    .card-item{
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+
+h1{
+    color: darkred;
+    text-align: center;
+    font-size: 80px;
+    font-family: "Nanum Myeongjo", serif;
+    font-weight: 800;
+    font-style: normal;
+}
+h3{
+    color: black;
+    text-align: center;
+    font-family: "Nanum Myeongjo", serif;
+    font-weight: 600;
+    font-style: normal;
+    font-size: 30px;
+}
