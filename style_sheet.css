@@ -2,6 +2,7 @@ body{
     background-color: beige;
 }
 
+.body-ext #more-card,
 .body-ext #msg,
 .body-ext #click_msg,
 .body-ext .card-item:not(.extended-card){
@@ -30,7 +31,7 @@ body{
 
 .extended-card{
     background-color: burlywood;
-    text-align: center;
+    text-align: left;
     color: bisque;
     width: 50%;
     height: 50%;
@@ -48,7 +49,7 @@ body{
     color: white;
     position: absolute;
     top: 10px;
-    left: 10px;
+    right: 10px;
 }
 .close-btn:hover{
     color: gray;
@@ -58,6 +59,14 @@ body{
     margin-left: 20%;
     margin-right: 5%;
 }
+
+#more-card{
+    background-color: burlywood;
+    position: fixed;
+    bottom: 5%;
+    right: 5%;
+}
+
 @media (max-width: 600px){
     .card-item{
         grid-template-columns: repeat(1, 1fr);

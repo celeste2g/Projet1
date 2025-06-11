@@ -7,6 +7,7 @@ async function loadMiracles() {
 function renderMiracles(data){
     const board = document.getElementById('board');
     const body = document.body;
+    const cards = [];
 
     data.forEach(miracle => {
         // creating a div element for my miracle card and add 'card-item' class
@@ -18,13 +19,13 @@ function renderMiracles(data){
         title.textContent = miracle.title;
 
         const location = document.createElement('p');
-        location.textContent = miracle.location;
+        location.textContent = "Location: " + miracle.location;
 
         const year = document.createElement('p');
-        year.textContent = miracle.year;
+        year.textContent = "Year: " + miracle.year;
 
         const summary = document.createElement('p');
-        summary.textContent = miracle.summary;
+        summary.textContent = "=> " + miracle.summary;
 
         m_card.appendChild(title);
         m_card.appendChild(year);
@@ -32,15 +33,15 @@ function renderMiracles(data){
         m_card.appendChild(summary);
 
         const details = document.createElement('p')
-        details.textContent = miracle.details;
+        details.textContent = "Details: " + miracle.details;
         details.style.display = 'none';
 
         const category = document.createElement('p');
-        category.textContent = miracle.category;
+        category.textContent = "Category: " + miracle.category;
         category.style.display = 'none';
 
         const type = document.createElement('p');
-        type.textContent = miracle.type;
+        type.textContent = "Type of miracle: " + miracle.type;
         type.style.display = 'none';
 
         const closeBtn = document.createElement('button');
@@ -48,9 +49,9 @@ function renderMiracles(data){
         closeBtn.style.display = 'none';
         closeBtn.className = 'close-btn';
 
-        m_card.appendChild(details);
         m_card.appendChild(category);
         m_card.appendChild(type);
+        m_card.appendChild(details);
         m_card.appendChild(closeBtn);
 
         m_card.addEventListener('click', (event) => {
@@ -71,7 +72,28 @@ function renderMiracles(data){
             }
         });
 
-        board.appendChild(m_card);
+        cards.push(m_card);
+
+
+    })
+
+    for (let i =0 ; i < 6; i++){
+        board.appendChild(cards[i]);
+    }
+
+    const addBtn = document.getElementById('more-card');
+    let current_index = 6;
+    addBtn.addEventListener('click', () => {
+        const endpoint = Math.min(current_index+3, cards.length);
+        for (let i = current_index; i < endpoint; i++){
+            board.appendChild(cards[i]);
+        }
+        current_index = endpoint;
+
+        if (current_index >= cards.length){
+            addBtn.style.display = 'none';
+        }
+
 
     });
 
