@@ -2,6 +2,12 @@ body{
     background-color: beige;
 }
 
+.body-ext #msg,
+.body-ext #click_msg,
+.body-ext .card-item:not(.extended-card){
+    display: none;
+}
+
 .card-grid{
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -22,9 +28,51 @@ body{
 
 }
 
+.extended-card{
+    background-color: burlywood;
+    text-align: center;
+    color: bisque;
+    width: 50%;
+    height: 50%;
+    z-index: 1000;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.close-btn{
+    background: none;
+    border: none;
+    font-size: 20px;
+    color: white;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+}
+.close-btn:hover{
+    color: gray;
+}
+
+#click_msg{
+    margin-left: 20%;
+    margin-right: 5%;
+}
 @media (max-width: 600px){
     .card-item{
         grid-template-columns: repeat(1, 1fr);
+    }
+    #click_msg{
+        margin: 5%;
+    }
+    h1{
+        font-size: 60px;
+    }
+    h3{
+        font-size: 20px;
+    }
+    p{
+        font-size: 15px;
     }
 }
 
