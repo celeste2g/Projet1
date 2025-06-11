@@ -1,7 +1,7 @@
 ## The MiracleDex
 A catalog of Catholic miracles.
 
-### Description 
+## Description 
 *MiracleDex* is a website that presents some real Catholic miracles.
 These miracles include Eucharistic miracles, Marian apparitions, incorruptible saints, and more.
 This project is inspired by the works done by **Blessed Carlo Acutis** during his life on earth.
