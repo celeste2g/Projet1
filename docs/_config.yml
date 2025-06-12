@@ -1,7 +1,0 @@
-# _config.yml
-title: MiracleDex
-description: This is my GitHub Pages site presenting miracles!
-theme: jekyll-theme-primer
-url: https://celeste2g.github.io
-baseurl: "" # Leave empty for root, or set if using subdirectory
-markdown: kramdown
