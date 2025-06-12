@@ -12,19 +12,25 @@ This project is inspired by the works done by **Blessed Carlo Acutis** during hi
 - If the button is pressed, more cards will be dynamically uploaded.
 - If all the cards are presented, the button disappears. 
 
-## Tools used
+## Code
 - HTML
 - CSS
 - JavaScript
 
 ## Setup instructions
-1. Clone the repo
+1. Clone the repo [link to repo](https://github.com/celeste2g/Projet1.git)
 2. Run `npm install`
 3. Start the server with `npm start`
 
 ## Live site link
 
+
 ## Screenshots
+The Home page
+![Homepage](docs/images/img2_homePage.png)
+
+A miracle card
+![Extended Miracle Card](docs/images/img2_extendedCard.png)
 
 ## Licence 
 MIT
